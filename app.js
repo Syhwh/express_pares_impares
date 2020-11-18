@@ -1,26 +1,26 @@
 var express = require('express');
-var exphbs  = require('express-handlebars');
- 
+var exphbs = require('express-handlebars');
+
 var app = express();
 
-let num=[];
-for(let i=1;i<=50;i++){
-    if(i%2==0){
-        num[i]=`Soy par!`
+let num = [];
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 == 0) {
+        num[i] = `Soy Par!`
     }
-    else{
+    else {
 
-        num[i]=`Soy Impar`!
+        num[i] = `Soy Impar!`
     }
 }
- 
-app.engine('handlebars',exphbs());
+
+app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
- 
-app.get('/',(req, res) =>{
-    res.render('home',{
+
+app.get('/', (req, res) => {
+    res.render('home', {
         num
     });
 });
- 
-app.listen(3000, console.log('puerto 3000'));
+
+app.listen(3000, () => console.log('puerto 3000'));
