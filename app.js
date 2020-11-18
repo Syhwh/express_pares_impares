@@ -6,11 +6,11 @@ var app = express();
 let num=[];
 for(let i=1;i<=50;i++){
     if(i%2==0){
-        num[i]=i+' Soy par!'
+        num[i]=`Soy par!`
     }
     else{
 
-        num[i]=i+' Soy Impar!'
+        num[i]=`Soy Impar`!
     }
 }
  
